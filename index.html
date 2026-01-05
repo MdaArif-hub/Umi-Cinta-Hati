@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Hari Lahir Umi Tersayang ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600;700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body onclick="createParticle(event)" ontouchstart="createParticle(event)">
+    
+    <audio id="bgMusic" src="music.mp3" loop></audio>
+    <audio id="clickSound" src="click.mp3"></audio>
+
+    <div id="audio-controls">
+        <div class="control-item"><span>🎵</span><input type="range" id="bgVolume" min="0" max="1" step="0.1" value="0.5"></div>
+        <div class="control-item"><span>🖱️</span><input type="range" id="clickVolume" min="0" max="1" step="0.1" value="0.25"></div>
+    </div>
+
+    <div id="loading-screen">
+        <div class="loader"></div>
+        <p>Tunggu jap eh Umi... Arif tengah siapkan kejutan untuk Umi ni ~ ✨</p>
+    </div>
+
+    <div id="bg-hearts"></div>
+
+    <section id="landing-page" class="hidden">
+        <h1>Selamat Hari Lahir, Umi...</h1>
+        <p>Ikhlas dari Arif, Aqil, Mia, dan Aiman ~</p>
+        <button class="btn glow-btn shake-infinite" id="startButton">Tekan sini, Umi Sayang ~ ✨</button>
+    </section>
+
+    <section id="game-page" class="hidden">
+        <h2 id="writing-title"></h2>
+        <div class="card-grid" id="cardGrid"></div>
+        <button class="btn hidden glow-btn" id="continueButton">Ada pesanan buat kita semua... 💌</button>
+    </section>
+
+    <section id="letter-page" class="hidden">
+        <div class="envelope-box shake-infinite" id="envelopeContainer">
+            <div class="envelope">
+                <div class="flap"></div>
+                <div class="letter" id="letterScroll">
+                    <div id="typewriter-text"></div>
+                    <button class="btn hidden" id="bonusBtn" style="margin-top:30px; width:100%; margin-bottom: 20px;">Tengok memori kita, Umi ~</button>
+                </div>
+            </div>
+        </div>
+        <div class="click-hint" id="clickHint">Tekan sampul ni, Umi ❤️</div>
+    </section>
+
+    <section id="bonus-page" class="hidden">
+        <h2 class="bonus-title">Memori Kita ✨</h2>
+        <div class="stack-container" id="stackContainer"></div>
+        <p class="hint-text">Klik gambar untuk simpan dalam hati ~</p>
+        <button class="btn hidden" id="finalHomeBtn" onclick="location.reload()">Ulang balik kejutan ni? ✨</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
